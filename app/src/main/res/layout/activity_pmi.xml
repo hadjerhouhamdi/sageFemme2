@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/salleinter"
+    tools:context=".pmi">
+
+    <Button
+        android:id="@+id/buttons1"
+        android:layout_width="333dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="224dp"
+        android:background="@drawable/buttonpink"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="Prénuptiale et préconceptionnelle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttons2"
+        android:layout_width="333dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/buttonpink"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="2éme et 3éme trimestre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttons1" />
+
+    <Button
+        android:id="@+id/buttons3"
+        android:layout_width="333dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/buttonpink"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="Prise en charge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttons2" />
+
+    <Button
+        android:id="@+id/buttons4"
+        android:layout_width="333dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/buttonpink"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="Consultation postnatale (mère)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttons3" />
+
+    <Button
+        android:id="@+id/buttons5"
+        android:layout_width="333dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/buttonpink"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="Suivi de l’enfant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttons4" />
+
+    <Button
+        android:id="@+id/buttons6"
+        android:layout_width="333dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/buttonpink"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="Prévention / Dépistage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttons5" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="247dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="104dp"
+        android:fontFamily="@font/inter"
+        android:text="Pour consulter les actes liés au suivi de la mère et du nourrisson,sélectionnez une catégorie"
+        android:textAlignment="center"
+        android:textColor="#FEFEFE"
+        app:layout_constraintBottom_toTopOf="@+id/buttons1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="263dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Service PMI / SMI"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

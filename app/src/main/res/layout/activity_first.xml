@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/interfacee"
+    tools:context=".first">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="245dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/button1"
+        android:backgroundTint="#FEFEFE"
+        android:elevation="70dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:hint="On Commence !"
+        android:text="On Commence !"
+        android:textAllCaps="false"
+        android:textColor="#F1B2D1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="195dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="44dp"
+
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="Bienvenue                                   sur Check-SF"
+        android:textAlignment="center"
+        android:textColor="#F2B3D2"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="309dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="10dp"
+
+        android:layout_marginTop="396dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Bienvenue future sage-femme ! Prête à entamer ton parcours vers l’excellence ?"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

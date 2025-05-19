@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/salleinter"
+    tools:context=".GHR">
+
+    <Button
+        android:id="@+id/buttons2"
+        android:layout_width="333dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="268dp"
+        android:background="@drawable/buttonpink"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="Accueil et identification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttons4"
+        android:layout_width="333dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/buttonpink"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="Examen clinique et paraclinique"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttons2" />
+
+    <Button
+        android:id="@+id/buttons7"
+        android:layout_width="333dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/buttonpink"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="Surveillance materno-fœtale"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttons10" />
+
+    <Button
+        android:id="@+id/buttons9"
+        android:layout_width="333dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/buttonpink"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="Suivi et documentation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttons7" />
+
+    <Button
+        android:id="@+id/buttons10"
+        android:layout_width="333dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/buttonpink"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="Prise en charge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttons4" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="217dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="92dp"
+        android:fontFamily="@font/inter"
+        android:text="Choisissez une catégorie pour voir les actes d’une grossesse à haut risque"
+        android:textAlignment="center"
+        android:textColor="#FEFEFE"
+        app:layout_constraintBottom_toTopOf="@+id/buttons2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.188" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="269dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Service GHR
+(Grossesse à Haut Risque)"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

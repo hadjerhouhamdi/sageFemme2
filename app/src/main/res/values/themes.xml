@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SageFemme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Tu peux ajouter d'autres personnalisations ici -->
+    </style>
+</resources>
