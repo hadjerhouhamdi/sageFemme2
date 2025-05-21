@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -14,6 +13,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class urgencepop extends DialogFragment {
 
@@ -38,14 +39,10 @@ public class urgencepop extends DialogFragment {
         ArrayList<String> items = getArguments() != null ?
                 getArguments().getStringArrayList(ARG_ITEMS) : new ArrayList<>();
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                requireContext(),
-                android.R.layout.simple_list_item_multiple_choice,
-                items
-        );
+        Set<String> checkedItems = loadCheckedItems();
 
+        ChecklistAdapter adapter = new ChecklistAdapter(requireContext(), items, checkedItems);
         checklistView.setAdapter(adapter);
-        checklistView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
         return view;
     }
@@ -62,6 +59,9 @@ public class urgencepop extends DialogFragment {
             window.setBackgroundDrawableResource(android.R.color.transparent);
         }
     }
+
+    private Set<String> loadCheckedItems() {
+        return requireContext().getSharedPreferences("PlanningChecklistPrefs", requireContext().MODE_PRIVATE)
+                .getStringSet("checked_items_planning", new HashSet<>());
+    }
 }
-
-

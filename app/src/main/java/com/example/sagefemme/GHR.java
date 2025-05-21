@@ -27,9 +27,9 @@ public class GHR extends AppCompatActivity {
         // Button 1: Accueil et identification
         findViewById(R.id.buttons2).setOnClickListener(v -> {
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Accueillir la gestante");
-            items.add(".Faire l’anamnèse");
-            items.add(".l’installer confortablement");
+            items.add("Accueillir la gestante");
+            items.add("Faire l’anamnèse");
+            items.add("l’installer confortablement");
 
             GHRPOP popup = GHRPOP.newInstance(items);
             popup.show(getSupportFragmentManager(), "AccueilPopup");
@@ -38,10 +38,10 @@ public class GHR extends AppCompatActivity {
         // Button 2: Examen clinique et paraclinique
         findViewById(R.id.buttons4).setOnClickListener(v -> {
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Examen général/obstétrical");
-            items.add(".Échographie");
-            items.add(".Radio");
-            items.add(".Tococardiographie");
+            items.add("Examen général/obstétrical");
+            items.add("Échographie");
+            items.add("Radio");
+            items.add("Tococardiographie");
 
             GHRPOP popup = GHRPOP.newInstance(items);
             popup.show(getSupportFragmentManager(), "ExamenPopup");
@@ -51,9 +51,9 @@ public class GHR extends AppCompatActivity {
         // Button 3: Prise en charge
         findViewById(R.id.buttons10).setOnClickListener(v -> {
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Amniocentèse");
-            items.add(".Surveillance après exploration");
-            items.add(".Diagnostic/pronostic");
+            items.add("Amniocentèse");
+            items.add("Surveillance après exploration");
+            items.add("Diagnostic/pronostic");
 
             GHRPOP popup = GHRPOP.newInstance(items);
             popup.show(getSupportFragmentManager(), "PriseEnChargePopup");
@@ -62,9 +62,9 @@ public class GHR extends AppCompatActivity {
         // Button 4: Surveillance materno-fœtale
         findViewById(R.id.buttons7).setOnClickListener(v -> {
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Monitoring");
-            items.add(".Fiche de surveillance");
-            items.add(".Soins nécessaires.");
+            items.add("Monitoring");
+            items.add("Fiche de surveillance");
+            items.add("Soins nécessaires.");
 
             GHRPOP popup = GHRPOP.newInstance(items);
             popup.show(getSupportFragmentManager(), "SurveillancePopup");
@@ -73,9 +73,9 @@ public class GHR extends AppCompatActivity {
         // Button 5: Suivi et documentation
         findViewById(R.id.buttons9).setOnClickListener(v -> {
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Transcrire examens et soins");
-            items.add(".Prévenir les infections");
-            items.add(".Accompagnement au bloc");
+            items.add("Transcrire examens et soins");
+            items.add("Prévenir les infections");
+            items.add("Accompagnement au bloc");
 
             GHRPOP popup = GHRPOP.newInstance(items);
             popup.show(getSupportFragmentManager(), "SuiviPopup");

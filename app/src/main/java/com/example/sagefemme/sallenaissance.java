@@ -27,9 +27,9 @@ public class sallenaissance extends AppCompatActivity {
 findViewById(R.id.buttons1).setOnClickListener(v -> {
 
     ArrayList<String> items = new ArrayList<>();
-            items.add(".Accueillir la parturiente");
-            items.add(".Réaliser l’interrogatoire");
-            items.add(".Effectuer l’examen obstétrical complet");
+            items.add("Accueillir la parturiente");
+            items.add("Réaliser l’interrogatoire");
+            items.add("Effectuer l’examen obstétrical complet");
 
     sallenaisspop popup = sallenaisspop.newInstance(items);
             popup.show(getSupportFragmentManager(), "AccueilPopup");
@@ -38,12 +38,12 @@ findViewById(R.id.buttons1).setOnClickListener(v -> {
 // Button 2: Examen clinique et paraclinique
 findViewById(R.id.buttons2).setOnClickListener(v -> {
 ArrayList<String> items = new ArrayList<>();
-            items.add(".Examen général/obstétrical");
-            items.add(".Palpation");
-            items.add(".Hauteur utérine ");
-            items.add(".BCF");
-            items.add(".Toucher vaginal ");
-            items.add(".Examen du bassin");
+            items.add("Examen général/obstétrical");
+            items.add("Palpation");
+            items.add("Hauteur utérine ");
+            items.add("BCF");
+            items.add("Toucher vaginal ");
+            items.add("Examen du bassin");
 
 sallenaisspop popup = sallenaisspop.newInstance(items);
             popup.show(getSupportFragmentManager(), "ExamenPopup");
@@ -54,10 +54,10 @@ sallenaisspop popup = sallenaisspop.newInstance(items);
 findViewById(R.id.buttons3).setOnClickListener(v -> {
 ArrayList<String> items = new ArrayList<>();
 
-            items.add(".Groupage Rh");
-            items.add(".Glycémie");
-            items.add(".Autres examens");
-            items.add(".Systématiques");
+            items.add("Groupage Rh");
+            items.add("Glycémie");
+            items.add("Autres examens");
+            items.add("Systématiques");
 
     sallenaisspop popup = sallenaisspop.newInstance(items);
             popup.show(getSupportFragmentManager(), "PriseEnChargePopup");
@@ -67,10 +67,10 @@ ArrayList<String> items = new ArrayList<>();
 findViewById(R.id.buttons4).setOnClickListener(v -> {
 
 ArrayList<String> items = new ArrayList<>();
-            items.add(".Partogramme");
-            items.add(".Courbe de contraction");
-            items.add(".Tococardiographie");
-            items.add(".Etat de la poche des eaux.");
+            items.add("Partogramme");
+            items.add("Courbe de contraction");
+            items.add("Tococardiographie");
+            items.add("Etat de la poche des eaux.");
 
     sallenaisspop popup = sallenaisspop.newInstance(items);
             popup.show(getSupportFragmentManager(), "SurveillancePopup");
@@ -80,12 +80,12 @@ ArrayList<String> items = new ArrayList<>();
 findViewById(R.id.buttons5).setOnClickListener(v -> {
 
 ArrayList<String> items = new ArrayList<>();
-            items.add(".Matériel d’accouchement");
-            items.add(".Anesthésie");
-            items.add(".Solutés");
-            items.add(". Episiotomie");
-            items.add(".Monitoring");
-            items.add(".Forceps");
+            items.add("Matériel d’accouchement");
+            items.add("Anesthésie");
+            items.add("Solutés");
+            items.add("Episiotomie");
+            items.add("Monitoring");
+            items.add("Forceps");
 
     sallenaisspop popup = sallenaisspop.newInstance(items);
             popup.show(getSupportFragmentManager(), "SuiviPopup");
@@ -95,11 +95,11 @@ ArrayList<String> items = new ArrayList<>();
 
             ArrayList<String> items = new ArrayList<>();
 
-            items.add(".Accouchement eutocique");
-            items.add(".Par siège");
-            items.add(".Grossesse multiple");
-            items.add(".Episiotomie");
-            items.add(".Version interne");
+            items.add("Accouchement eutocique");
+            items.add("Par siège");
+            items.add("Grossesse multiple");
+            items.add("Episiotomie");
+            items.add("Version interne");
 
             sallenaisspop popup = sallenaisspop.newInstance(items);
             popup.show(getSupportFragmentManager(), "SuiviPopup");
@@ -108,11 +108,11 @@ ArrayList<String> items = new ArrayList<>();
 
             ArrayList<String> items = new ArrayList<>();
 
-            items.add(".Score d’Apgar");
-            items.add(".Aspiration oxygène");
-            items.add(".Massage cardiaque");
-            items.add(".Soins du cordon");
-            items.add(".Habillage");
+            items.add("Score d’Apgar");
+            items.add("Aspiration oxygène");
+            items.add("Massage cardiaque");
+            items.add("Soins du cordon");
+            items.add("Habillage");
 
 
             sallenaisspop popup = sallenaisspop.newInstance(items);
@@ -122,12 +122,12 @@ ArrayList<String> items = new ArrayList<>();
 
             ArrayList<String> items = new ArrayList<>();
 
-            items.add(".Aspiration");
-            items.add(".Ventilation");
-            items.add(".Intubation");
-            items.add(".Cathétérisme ombilical");
-            items.add(".Injection");
-            items.add(".PH ");
+            items.add("Aspiration");
+            items.add("Ventilation");
+            items.add("Intubation");
+            items.add("Cathétérisme ombilical");
+            items.add("Injection");
+            items.add("PH ");
 
             sallenaisspop popup = sallenaisspop.newInstance(items);
             popup.show(getSupportFragmentManager(), "SuiviPopup");
@@ -135,11 +135,11 @@ ArrayList<String> items = new ArrayList<>();
         findViewById(R.id.buttons8).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Surveillance 2h");
-            items.add(".Mise au sein");
-            items.add(".Nettoyage");
-            items.add(".Stérilisation");
-            items.add(".Remplissage des dossiers.");
+            items.add("Surveillance 2h");
+            items.add("Mise au sein");
+            items.add("Nettoyage");
+            items.add("Stérilisation");
+            items.add("Remplissage des dossiers.");
 
             sallenaisspop popup = sallenaisspop.newInstance(items);
             popup.show(getSupportFragmentManager(), "SuiviPopup");
@@ -147,12 +147,12 @@ ArrayList<String> items = new ArrayList<>();
         findViewById(R.id.buttons5).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Matériel d’accouchement");
-            items.add(".Anesthésie");
-            items.add(".Solutés");
-            items.add(". Episiotomie");
-            items.add(".Monitoring");
-            items.add(".Forceps");
+            items.add("Matériel d’accouchement");
+            items.add("Anesthésie");
+            items.add("Solutés");
+            items.add("Episiotomie");
+            items.add("Monitoring");
+            items.add("Forceps");
 
             sallenaisspop popup = sallenaisspop.newInstance(items);
             popup.show(getSupportFragmentManager(), "SuiviPopup");
@@ -161,9 +161,9 @@ ArrayList<String> items = new ArrayList<>();
 
             ArrayList<String> items = new ArrayList<>();
 
-            items.add("..Déclaration de naissance");
-            items.add(".Certificat d’accouchement");
-            items.add(".Congé maternité.");
+            items.add("Déclaration de naissance");
+            items.add("Certificat d’accouchement");
+            items.add("Congé maternité.");
 
 
             sallenaisspop popup = sallenaisspop.newInstance(items);

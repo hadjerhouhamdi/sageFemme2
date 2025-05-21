@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -14,6 +13,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class GHRPOP extends DialogFragment {
 
@@ -31,21 +32,17 @@ public class GHRPOP extends DialogFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.ghrpop_acceuil, container, false);
+        View view = inflater.inflate(R.layout.suitepop, container, false);
 
         ListView checklistView = view.findViewById(R.id.checklist_view);
 
         ArrayList<String> items = getArguments() != null ?
                 getArguments().getStringArrayList(ARG_ITEMS) : new ArrayList<>();
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                requireContext(),
-                android.R.layout.simple_list_item_multiple_choice,
-                items
-        );
+        Set<String> checkedItems = loadCheckedItems();
 
+        ChecklistAdapter adapter = new ChecklistAdapter(requireContext(), items, checkedItems);
         checklistView.setAdapter(adapter);
-        checklistView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
         return view;
     }
@@ -61,5 +58,10 @@ public class GHRPOP extends DialogFragment {
             window.setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT);
             window.setBackgroundDrawableResource(android.R.color.transparent);
         }
+    }
+
+    private Set<String> loadCheckedItems() {
+        return requireContext().getSharedPreferences("PlanningChecklistPrefs", requireContext().MODE_PRIVATE)
+                .getStringSet("checked_items_planning", new HashSet<>());
     }
 }

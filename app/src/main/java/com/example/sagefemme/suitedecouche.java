@@ -25,11 +25,11 @@ public class suitedecouche extends AppCompatActivity {
 // Button 2: Surveillance de la mère
         findViewById(R.id.buttons2).setOnClickListener(v -> {
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Constantes");
-            items.add(".lochies");
-            items.add(".involution utérine");
-            items.add(".signes de phlébite");
-            items.add(".complications");
+            items.add("Constantes");
+            items.add("lochies");
+            items.add("involution utérine");
+            items.add("signes de phlébite");
+            items.add("complications");
             suitepop popup = suitepop.newInstance(items);
             popup.show(getSupportFragmentManager(), "AccueilPopup");
         });
@@ -37,11 +37,11 @@ public class suitedecouche extends AppCompatActivity {
         // Button 4: Soins à la mère
         findViewById(R.id.buttons4).setOnClickListener(v -> {
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Toilette vulvaire");
-            items.add(".soins du sein");
-            items.add(".soin sépisiotomie");
-            items.add(".vidange du sein");
-            items.add(".Anti-D");
+            items.add("Toilette vulvaire");
+            items.add("soins du sein");
+            items.add("soin sépisiotomie");
+            items.add("vidange du sein");
+            items.add("Anti-D");
 
             suitepop popup = suitepop.newInstance(items);
             popup.show(getSupportFragmentManager(), "ExamenPopup");
@@ -52,11 +52,11 @@ public class suitedecouche extends AppCompatActivity {
         findViewById(R.id.buttons10).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Coloration ");
-            items.add(".1ère miction et selle");
-            items.add(".Soins du cordon");
-            items.add(".Toilette");
-            items.add(".vaccinations");
+            items.add("Coloration ");
+            items.add("1ère miction et selle");
+            items.add("Soins du cordon");
+            items.add("Toilette");
+            items.add("vaccinations");
 
             suitepop popup = suitepop.newInstance(items);
             popup.show(getSupportFragmentManager(), "PriseEnChargePopup");
@@ -66,10 +66,10 @@ public class suitedecouche extends AppCompatActivity {
         findViewById(R.id.buttons9).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Hygiène");
-            items.add(".Alimentation");
-            items.add(".Anomalies");
-            items.add(".Contraception");
+            items.add("Hygiène");
+            items.add("Alimentation");
+            items.add("Anomalies");
+            items.add("Contraception");
             items.add("Orientation SMI");
 
 
@@ -82,10 +82,10 @@ public class suitedecouche extends AppCompatActivity {
         findViewById(R.id.buttons7).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Mise au sein");
-            items.add(".Bandage");
-            items.add(".Prévention des engorgements");
-            items.add(".Crevasses");
+            items.add("Mise au sein");
+            items.add("Bandage");
+            items.add("Prévention des engorgements");
+            items.add("Crevasses");
 
 
             suitepop popup = suitepop.newInstance(items);

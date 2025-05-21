@@ -39,7 +39,7 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/buttonpink"
         android:fontFamily="@font/nunito_extrabold"
-        android:text="Surveillance materno-fœtale"
+        android:text="Surveillance materno-foetale"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttons10" />

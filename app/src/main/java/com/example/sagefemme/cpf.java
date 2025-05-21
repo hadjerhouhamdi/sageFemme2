@@ -25,7 +25,8 @@ public class cpf extends AppCompatActivity {
         // Button 1: Préparation
         findViewById(R.id.buttons1).setOnClickListener(v -> {
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Préparer local et matériel (consultation,counseling,IEC).");
+            items.add("Préparer local et matériel "
+                    +"(consultation,counseling,IEC)");
 
             planningpop popup = planningpop.newInstance(items);
             popup.show(getSupportFragmentManager(), "AccueilPopup");
@@ -34,8 +35,8 @@ public class cpf extends AppCompatActivity {
         // Button 2: Accueil / Counseling
         findViewById(R.id.buttons2).setOnClickListener(v -> {
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Conduire une séance de counseling");
-            items.add(".IEC pour groupes cibles.");
+            items.add("Conduire une séance de counseling");
+            items.add("IEC pour groupes cibles");
 
 
             planningpop popup = planningpop.newInstance(items);
@@ -47,10 +48,10 @@ public class cpf extends AppCompatActivity {
         findViewById(R.id.buttons3).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Examen général ");
-            items.add(".seins");
-            items.add(".examen pelvien");
-            items.add(".dépistage infections");
+            items.add("Examen général ");
+            items.add("Seins");
+            items.add("Examen pelvien");
+            items.add("Dépistage infections");
 
 
             planningpop popup = planningpop.newInstance(items);
@@ -61,10 +62,10 @@ public class cpf extends AppCompatActivity {
         findViewById(R.id.buttons4).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Frottis");
-            items.add(".prélèvements");
-            items.add(".échographie");
-            items.add(".insertion/retrait DIU");
+            items.add("Frottis");
+            items.add("Prélèvements");
+            items.add("échographie");
+            items.add("Insertion/retrait DIU");
 
 
             planningpop popup = planningpop.newInstance(items);
@@ -75,7 +76,8 @@ public class cpf extends AppCompatActivity {
         findViewById(R.id.buttons5).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Prescrire/Expliquer méthodes (hormonale,locale, barrière)");
+            items.add("Prescrire/Expliquer méthodes " +
+                    "(hormonale,locale, barrière)");
 
 
             planningpop popup = planningpop.newInstance(items);
@@ -85,21 +87,21 @@ public class cpf extends AppCompatActivity {
         findViewById(R.id.buttons6).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Contrôle DIU");
-            items.add(".effets secondaires");
-            items.add(".orientation si complications");
+            items.add("Contrôle DIU");
+            items.add("Effets secondaires");
+            items.add("Orientation si complications");
 
             planningpop popup = planningpop.newInstance(items);
             popup.show(getSupportFragmentManager(), "SuiviPopup");
         });
         // Button 7: Gestion / Logistique
-        findViewById(R.id.buttons6).setOnClickListener(v -> {
+        findViewById(R.id.buttons7).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Analyse des données PF");
-            items.add(".calcul CMM");
-            items.add(".bon de commande");
-            items.add(".stockage produits");
+            items.add("Analyse des données PF");
+            items.add("Calcul CMM");
+            items.add("Bon de commande");
+            items.add("Stockage produits");
 
 
             planningpop popup = planningpop.newInstance(items);

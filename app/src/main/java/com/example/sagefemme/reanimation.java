@@ -25,7 +25,7 @@ public class reanimation extends AppCompatActivity {
         // Button 1: Réception et installation
         findViewById(R.id.buttons1).setOnClickListener(v -> {
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Recevoir et installer une opérée");
+            items.add("Recevoir et installer une opérée");
 
             urgencepop popup = urgencepop.newInstance(items);
             popup.show(getSupportFragmentManager(), "AccueilPopup");
@@ -34,10 +34,10 @@ public class reanimation extends AppCompatActivity {
         // Button 2: Surveillance post-opératoire
         findViewById(R.id.buttons2).setOnClickListener(v -> {
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Surveillance en réanimation");
-            items.add(".après curetage");
-            items.add(".cerclage");
-            items.add(".curage");
+            items.add("Surveillance en réanimation");
+            items.add("Après curetage");
+            items.add("Cerclage");
+            items.add("Curage");
             urgencepop popup = urgencepop.newInstance(items);
             popup.show(getSupportFragmentManager(), "ExamenPopup");
         });
@@ -47,7 +47,7 @@ public class reanimation extends AppCompatActivity {
         findViewById(R.id.buttons3).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Participer à la réanimation cardio-respiratoire");
+            items.add("Participer à la réanimation cardio-respiratoire");
 
             urgencepop popup = urgencepop.newInstance(items);
             popup.show(getSupportFragmentManager(), "PriseEnChargePopup");
@@ -57,7 +57,8 @@ public class reanimation extends AppCompatActivity {
         findViewById(R.id.buttons4).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Pratiquer une transfusion avec hémovigilance (prescription médicale)");
+            items.add("Pratiquer une transfusion avec hémovigilance " +
+                    "(prescription médicale)");
 
             urgencepop popup = urgencepop.newInstance(items);
             popup.show(getSupportFragmentManager(), "SurveillancePopup");
@@ -67,8 +68,8 @@ public class reanimation extends AppCompatActivity {
         findViewById(R.id.buttons5).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Monitorage invasif / non-invasif");
-            items.add(".surveillance hémodynamique, douleur");
+            items.add("Monitorage invasif / non-invasif");
+            items.add("surveillance hémodynamique, douleur");
 
             urgencepop popup = urgencepop.newInstance(items);
             popup.show(getSupportFragmentManager(), "SuiviPopup");
@@ -78,7 +79,8 @@ public class reanimation extends AppCompatActivity {
         findViewById(R.id.buttons6).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Complications post-anesthésiques et post-opératoires");
+            items.add("Complications post-anesthésiques et " +
+                    "post-opératoires");
 
             urgencepop popup = urgencepop.newInstance(items);
             popup.show(getSupportFragmentManager(), "SuiviPopup");
@@ -88,8 +90,8 @@ public class reanimation extends AppCompatActivity {
         findViewById(R.id.buttons7).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Transcrire examens");
-            items.add(".traitements sur les dossiers");
+            items.add("Transcrire examens");
+            items.add("Traitements sur les dossiers");
             urgencepop popup = urgencepop.newInstance(items);
             popup.show(getSupportFragmentManager(), "SuiviPopup");
         });
@@ -97,7 +99,7 @@ public class reanimation extends AppCompatActivity {
         findViewById(R.id.buttons8).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Prise en charge en équipe pluridisciplinaire");
+            items.add("Prise en charge en équipe pluridisciplinaire");
 
             urgencepop popup = urgencepop.newInstance(items);
             popup.show(getSupportFragmentManager(), "SuiviPopup");

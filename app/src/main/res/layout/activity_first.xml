@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/interfacee"
+    android:background="@drawable/inter1"
     tools:context=".first">
 
     <Button
@@ -31,19 +31,19 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="195dp"
-        android:layout_height="69dp"
+        android:layout_width="188dp"
+        android:layout_height="66dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="28dp"
 
         android:fontFamily="@font/nunito_extrabold"
         android:text="Bienvenue                                   sur Check-SF"
         android:textAlignment="center"
         android:textColor="#F2B3D2"
-        android:textSize="25sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

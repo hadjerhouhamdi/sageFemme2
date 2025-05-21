@@ -25,20 +25,20 @@ public class pmi extends AppCompatActivity {
         // Button 1: Accueil et identification
         findViewById(R.id.buttons1).setOnClickListener(v -> {
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Participation à la consultation");
-            GHRPOP popup = GHRPOP.newInstance(items);
+            items.add("Participation à la consultation");
+            pmipop popup = pmipop.newInstance(items);
             popup.show(getSupportFragmentManager(), "AccueilPopup");
         });
 
         // Button 2: Examen clinique et paraclinique
         findViewById(R.id.buttons2).setOnClickListener(v -> {
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Interrogatoire");
-            items.add(".Examen (général + obstétrical)");
-            items.add(".TV");
-            items.add(".Bilan");
-            items.add(".FCV");
-            items.add(".Carnet de suivi");
+            items.add("Interrogatoire");
+            items.add("Examen (général + obstétrical)");
+            items.add("TV");
+            items.add("Bilan");
+            items.add("FCV");
+            items.add("Carnet de suivi");
 
             pmipop popup = pmipop.newInstance(items);
             popup.show(getSupportFragmentManager(), "ExamenPopup");
@@ -49,9 +49,9 @@ public class pmi extends AppCompatActivity {
         findViewById(R.id.buttons3).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Examen obstétrical (inspection, palpation,TV…)");
-            items.add(".Dépistage pathologies");
-            items.add(".Vaccins");
+            items.add("Examen obstétrical (inspection, palpation,TV…)");
+            items.add("Dépistage pathologies");
+            items.add("Vaccins");
 
             pmipop popup = pmipop.newInstance(items);
             popup.show(getSupportFragmentManager(), "PriseEnChargePopup");
@@ -61,10 +61,10 @@ public class pmi extends AppCompatActivity {
         findViewById(R.id.buttons4).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Examen gynéco");
-            items.add(".Ablation des fils");
-            items.add(".Rééducation périnéale");
-            items.add(".Médicaments");
+            items.add("Examen gynéco");
+            items.add("Ablation des fils");
+            items.add("Rééducation périnéale");
+            items.add("Médicaments");
             items.add("Orientation PF");
 
 
@@ -77,22 +77,22 @@ public class pmi extends AppCompatActivity {
         findViewById(R.id.buttons5).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Allaitement");
-            items.add(".Croissance");
-            items.add(".Développement psychomoteur");
-            items.add(".Rééducation périnéale");
-            items.add(".Vaccination");
-            items.add(".Carnet de santé");
+            items.add("Allaitement");
+            items.add("Croissance");
+            items.add("Développement psychomoteur");
+            items.add("Rééducation périnéale");
+            items.add("Vaccination");
+            items.add("Carnet de santé");
 
             pmipop popup = pmipop.newInstance(items);
             popup.show(getSupportFragmentManager(), "SuiviPopup");
         });
         findViewById(R.id.buttons6).setOnClickListener(v -> {
             ArrayList<String> items = new ArrayList<>();
-            items.add(".Maladies carentielles");
-            items.add(".Diarrhées");
-            items.add(".malnutrition");
-            items.add(".Orientation");
+            items.add("Maladies carentielles");
+            items.add("Diarrhées");
+            items.add("malnutrition");
+            items.add("Orientation");
 
             pmipop popup = pmipop.newInstance(items);
             popup.show(getSupportFragmentManager(), "SuiviPopup");
