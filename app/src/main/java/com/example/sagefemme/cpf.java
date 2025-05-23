@@ -25,8 +25,8 @@ public class cpf extends AppCompatActivity {
         // Button 1: Préparation
         findViewById(R.id.buttons1).setOnClickListener(v -> {
             ArrayList<String> items = new ArrayList<>();
-            items.add("Préparer local et matériel "
-                    +"(consultation,counseling,IEC)");
+            items.add("Préparer local et matériel           "
+                      + "(consultation,counseling,IEC)");
 
             planningpop popup = planningpop.newInstance(items);
             popup.show(getSupportFragmentManager(), "AccueilPopup");

@@ -91,7 +91,7 @@ public class pmi extends AppCompatActivity {
             ArrayList<String> items = new ArrayList<>();
             items.add("Maladies carentielles");
             items.add("Diarrhées");
-            items.add("malnutrition");
+            items.add("Malnutrition");
             items.add("Orientation");
 
             pmipop popup = pmipop.newInstance(items);

@@ -1,5 +1,6 @@
 package com.example.sagefemme;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
@@ -13,12 +14,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Set;
 
 public class planningpop extends DialogFragment {
 
     private static final String ARG_ITEMS = "checklist_items";
+    private static final String PREFS_NAME = "PlanningChecklistPrefs";
+    private static final String PREF_KEY = "checked_items_planning";
 
     public static planningpop newInstance(ArrayList<String> items) {
         planningpop fragment = new planningpop();
@@ -36,12 +38,16 @@ public class planningpop extends DialogFragment {
 
         ListView checklistView = view.findViewById(R.id.checklist_view);
 
-        ArrayList<String> items = getArguments() != null ?
-                getArguments().getStringArrayList(ARG_ITEMS) : new ArrayList<>();
+        ArrayList<String> items = getArguments() != null
+                ? getArguments().getStringArrayList(ARG_ITEMS)
+                : new ArrayList<>();
 
-        Set<String> checkedItems = loadCheckedItems();
+        // Utilisation du helper pour récupérer les éléments cochés
+        Set<String> checkedItems = PreferencesHelper.loadCheckedItems(requireContext(), PREF_KEY);
 
-        ChecklistAdapter adapter = new ChecklistAdapter(requireContext(), items, checkedItems);
+        // Passe la clé PREF_KEY au ChecklistAdapter pour la sauvegarde
+        ChecklistAdapter adapter = new ChecklistAdapter(requireContext(), items, checkedItems, PREF_KEY);
+
         checklistView.setAdapter(adapter);
 
         return view;
@@ -58,10 +64,5 @@ public class planningpop extends DialogFragment {
             window.setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT);
             window.setBackgroundDrawableResource(android.R.color.transparent);
         }
-    }
-
-    private Set<String> loadCheckedItems() {
-        return requireContext().getSharedPreferences("PlanningChecklistPrefs", requireContext().MODE_PRIVATE)
-                .getStringSet("checked_items_planning", new HashSet<>());
     }
 }

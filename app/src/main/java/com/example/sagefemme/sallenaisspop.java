@@ -1,5 +1,6 @@
 package com.example.sagefemme;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
@@ -19,6 +20,8 @@ import java.util.Set;
 public class sallenaisspop extends DialogFragment {
 
     private static final String ARG_ITEMS = "checklist_items";
+    private static final String PREFS_NAME = "PlanningChecklistPrefs";
+    private static final String PREF_KEY = "checked_items_planning";
 
     public static sallenaisspop newInstance(ArrayList<String> items) {
         sallenaisspop fragment = new sallenaisspop();
@@ -36,12 +39,15 @@ public class sallenaisspop extends DialogFragment {
 
         ListView checklistView = view.findViewById(R.id.checklist_view);
 
-        ArrayList<String> items = getArguments() != null ?
-                getArguments().getStringArrayList(ARG_ITEMS) : new ArrayList<>();
+        ArrayList<String> items = getArguments() != null
+                ? getArguments().getStringArrayList(ARG_ITEMS)
+                : new ArrayList<>();
 
+        // Charge les éléments cochés
         Set<String> checkedItems = loadCheckedItems();
 
-        ChecklistAdapter adapter = new ChecklistAdapter(requireContext(), items, checkedItems);
+        // Passe la clé PREF_KEY au ChecklistAdapter pour sauvegarder
+        ChecklistAdapter adapter = new ChecklistAdapter(requireContext(), items, checkedItems, PREF_KEY);
         checklistView.setAdapter(adapter);
 
         return view;
@@ -61,7 +67,7 @@ public class sallenaisspop extends DialogFragment {
     }
 
     private Set<String> loadCheckedItems() {
-        return requireContext().getSharedPreferences("PlanningChecklistPrefs", requireContext().MODE_PRIVATE)
-                .getStringSet("checked_items_planning", new HashSet<>());
+        return requireContext().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+                .getStringSet(PREF_KEY, new HashSet<>());
     }
 }

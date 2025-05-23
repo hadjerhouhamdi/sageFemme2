@@ -13,12 +13,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Set;
 
 public class GHRPOP extends DialogFragment {
 
     private static final String ARG_ITEMS = "checklist_items";
+    private static final String CHECKED_ITEMS_KEY = "checked_items_ghrpop";  // clé unique
 
     public static GHRPOP newInstance(ArrayList<String> items) {
         GHRPOP fragment = new GHRPOP();
@@ -36,12 +36,16 @@ public class GHRPOP extends DialogFragment {
 
         ListView checklistView = view.findViewById(R.id.checklist_view);
 
-        ArrayList<String> items = getArguments() != null ?
-                getArguments().getStringArrayList(ARG_ITEMS) : new ArrayList<>();
+        ArrayList<String> items = getArguments() != null
+                ? getArguments().getStringArrayList(ARG_ITEMS)
+                : new ArrayList<>();
 
-        Set<String> checkedItems = loadCheckedItems();
+        // Charger les éléments cochés depuis SharedPreferences via PreferencesHelper
+        Set<String> checkedItems = PreferencesHelper.loadCheckedItems(requireContext(), CHECKED_ITEMS_KEY);
 
-        ChecklistAdapter adapter = new ChecklistAdapter(requireContext(), items, checkedItems);
+        // Créer l’adaptateur avec la clé unique pour cette popup
+        ChecklistAdapter adapter = new ChecklistAdapter(requireContext(), items, checkedItems, CHECKED_ITEMS_KEY);
+
         checklistView.setAdapter(adapter);
 
         return view;
@@ -54,14 +58,9 @@ public class GHRPOP extends DialogFragment {
             Window window = getDialog().getWindow();
             DisplayMetrics metrics = new DisplayMetrics();
             requireActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
-            int width = (int)(metrics.widthPixels * 0.8);
+            int width = (int) (metrics.widthPixels * 0.8);
             window.setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT);
             window.setBackgroundDrawableResource(android.R.color.transparent);
         }
-    }
-
-    private Set<String> loadCheckedItems() {
-        return requireContext().getSharedPreferences("PlanningChecklistPrefs", requireContext().MODE_PRIVATE)
-                .getStringSet("checked_items_planning", new HashSet<>());
     }
 }

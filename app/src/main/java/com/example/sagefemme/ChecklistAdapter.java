@@ -1,7 +1,6 @@
 package com.example.sagefemme;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,11 +17,13 @@ public class ChecklistAdapter extends BaseAdapter {
     private final Context context;
     private final ArrayList<String> items;
     private final Set<String> checkedItems;
+    private final String preferencesKey;
 
-    public ChecklistAdapter(Context context, ArrayList<String> items, Set<String> checkedItems) {
+    public ChecklistAdapter(Context context, ArrayList<String> items, Set<String> checkedItems, String preferencesKey) {
         this.context = context;
         this.items = items;
-        this.checkedItems = checkedItems;
+        this.checkedItems = new HashSet<>(checkedItems); // Copier pour modifier en local
+        this.preferencesKey = preferencesKey;
     }
 
     @Override
@@ -54,23 +55,22 @@ public class ChecklistAdapter extends BaseAdapter {
 
         String item = getItem(position);
         textView.setText(item);
+
+        // Détacher le listener pour éviter déclenchement lors du setChecked
+        checkBox.setOnCheckedChangeListener(null);
         checkBox.setChecked(checkedItems.contains(item));
 
-        // On met à jour checkedItems quand l'utilisateur clique sur la case
+        // Réassigner le listener
         checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 checkedItems.add(item);
             } else {
                 checkedItems.remove(item);
             }
-            saveCheckedItems(); // Sauvegarde à chaque clic
+            // Sauvegarder immédiatement les données
+            PreferencesHelper.saveCheckedItems(context, preferencesKey, checkedItems);
         });
 
         return row;
-    }
-
-    private void saveCheckedItems() {
-        SharedPreferences prefs = context.getSharedPreferences("PlanningChecklistPrefs", Context.MODE_PRIVATE);
-        prefs.edit().putStringSet("checked_items_planning", checkedItems).apply();
     }
 }

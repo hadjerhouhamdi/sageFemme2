@@ -57,8 +57,8 @@ public class reanimation extends AppCompatActivity {
         findViewById(R.id.buttons4).setOnClickListener(v -> {
 
             ArrayList<String> items = new ArrayList<>();
-            items.add("Pratiquer une transfusion avec hémovigilance " +
-                    "(prescription médicale)");
+            items.add("Pratiquer une transfusion avec hémovigilance "
+                    +"(prescription médicale)");
 
             urgencepop popup = urgencepop.newInstance(items);
             popup.show(getSupportFragmentManager(), "SurveillancePopup");
@@ -69,7 +69,7 @@ public class reanimation extends AppCompatActivity {
 
             ArrayList<String> items = new ArrayList<>();
             items.add("Monitorage invasif / non-invasif");
-            items.add("surveillance hémodynamique, douleur");
+            items.add("Surveillance hémodynamique, douleur");
 
             urgencepop popup = urgencepop.newInstance(items);
             popup.show(getSupportFragmentManager(), "SuiviPopup");
