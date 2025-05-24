@@ -8,155 +8,142 @@
     android:background="@drawable/salleinter"
     tools:context=".sallenaissance">
 
-    <Button
-        android:id="@+id/buttons1"
-        android:layout_width="333dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="160dp"
-        android:background="@drawable/buttonpink"
-        android:fontFamily="@font/nunito_extrabold"
-        android:text="Admission"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttons2"
-        android:layout_width="333dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/buttonpink"
-        android:fontFamily="@font/nunito_extrabold"
-        android:text="Examens obstétricaux"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttons1" />
-
-    <Button
-        android:id="@+id/buttons3"
-        android:layout_width="333dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/buttonpink"
-        android:fontFamily="@font/nunito_extrabold"
-        android:text="Examens paracliniques"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttons2" />
-
-    <Button
-        android:id="@+id/buttons4"
-        android:layout_width="333dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/buttonpink"
-        android:fontFamily="@font/nunito_extrabold"
-        android:text="Surveillance du travail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttons3" />
-
-    <Button
-        android:id="@+id/buttons5"
-        android:layout_width="333dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/buttonpink"
-        android:fontFamily="@font/nunito_extrabold"
-        android:text="Préparation accouchement"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttons4" />
-
-    <Button
-        android:id="@+id/buttons6"
-        android:layout_width="333dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/buttonpink"
-        android:fontFamily="@font/nunito_extrabold"
-        android:text="Nouveau-né"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttons10" />
-
-    <Button
-        android:id="@+id/buttons7"
-        android:layout_width="333dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/buttonpink"
-        android:fontFamily="@font/nunito_extrabold"
-        android:text="Réanimation du N-Né"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttons6" />
-
-    <Button
-        android:id="@+id/buttons8"
-        android:layout_width="333dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/buttonpink"
-        android:fontFamily="@font/nunito_extrabold"
-        android:text="Post-accouchement"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttons7" />
-
-    <Button
-        android:id="@+id/buttons9"
-        android:layout_width="333dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/buttonpink"
-        android:fontFamily="@font/nunito_extrabold"
-        android:text="Formalités administratives"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttons8" />
-
-    <Button
-        android:id="@+id/buttons10"
-        android:layout_width="333dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/buttonpink"
-        android:fontFamily="@font/nunito_extrabold"
-        android:text="Accouchement"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttons5" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="240dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginBottom="36dp"
-        android:fontFamily="@font/inter"
-        android:text="Pour protéger mère et enfant, chaque acte doit être bien maîtrisé"
-        android:textAlignment="center"
-        android:textColor="#FEFEFE"
-        app:layout_constraintBottom_toTopOf="@+id/buttons1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    <!-- Header Title -->
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-black"
-        android:text="service Salle de naissance"
+        android:text="Service salle de naissance"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Subheading Text -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter"
+        android:text="Pour protéger mère et enfant, chaque acte doit être bien maîtrisé"
+        android:textAlignment="center"
+        android:textColor="#FEFEFE"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="611dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttons1"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/buttonpink"
+                android:fontFamily="@font/nunito_extrabold"
+                android:text="Admission" />
+
+            <Button
+                android:id="@+id/buttons2"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonpink"
+                android:fontFamily="@font/nunito_extrabold"
+                android:text="Examens obstétricaux" />
+
+            <Button
+                android:id="@+id/buttons3"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonpink"
+                android:fontFamily="@font/nunito_extrabold"
+                android:text="Examens paracliniques" />
+
+            <Button
+                android:id="@+id/buttons4"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonpink"
+                android:fontFamily="@font/nunito_extrabold"
+                android:text="Surveillance du travail" />
+
+            <Button
+                android:id="@+id/buttons5"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonpink"
+                android:fontFamily="@font/nunito_extrabold"
+                android:text="Préparation accouchement" />
+
+            <Button
+                android:id="@+id/buttons10"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonpink"
+                android:fontFamily="@font/nunito_extrabold"
+                android:text="Accouchement" />
+
+            <Button
+                android:id="@+id/buttons6"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonpink"
+                android:fontFamily="@font/nunito_extrabold"
+                android:text="Nouveau-né" />
+
+            <Button
+                android:id="@+id/buttons7"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonpink"
+                android:fontFamily="@font/nunito_extrabold"
+                android:text="Réanimation du N-Né" />
+
+            <Button
+                android:id="@+id/buttons8"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonpink"
+                android:fontFamily="@font/nunito_extrabold"
+                android:text="Post-accouchement" />
+
+            <Button
+                android:id="@+id/buttons9"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/buttonpink"
+                android:fontFamily="@font/nunito_extrabold"
+                android:text="Formalités administratives" />
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
